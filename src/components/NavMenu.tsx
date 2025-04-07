@@ -1,45 +1,30 @@
 import "./NavMenu.css";
 
+const menuItems = [
+  { href: "#about", icon: "🧑‍💼", label: "À propos" },
+  { href: "#skills", icon: "🧠", label: "Compétences" },
+  { href: "#resume", icon: "📄", label: "Résumé" },
+  { href: "#portfolio", icon: "🎨", label: "Portfolio" },
+  { href: "#services", icon: "🛠️", label: "Services" },
+  { href: "#contact", icon: "📬", label: "Contact" },
+];
+
 const NavMenu = () => {
   return (
     <nav className="navmenu">
       <ul>
-        <li>
-          <a href="#about">
-            <span className="navicon">🧑‍💼</span> {/* Profil */}
-            À propos
-          </a>
-        </li>
-        <li>
-          <a href="#skills">
-            <span className="navicon">🧠</span> {/* Compétences */}
-            Compétences
-          </a>
-        </li>
-        <li>
-          <a href="#resume">
-            <span className="navicon">📄</span> {/* Résumé CV */}
-            Résumé
-          </a>
-        </li>
-        <li>
-          <a href="#portfolio">
-            <span className="navicon">🎨</span> {/* Portfolio */}
-            Portfolio
-          </a>
-        </li>
-        <li>
-          <a href="#services">
-            <span className="navicon">🛠️</span> {/* Services */}
-            Services
-          </a>
-        </li>
-        <li>
-          <a href="#contact">
-            <span className="navicon">📬</span> {/* Contact */}
-            Contact
-          </a>
-        </li>
+        {menuItems.map((item, index) => (
+          <li
+            key={item.href}
+            className="navmenu-item fade-in"
+            style={{ animationDelay: `${index * 0.15}s` }}
+          >
+            <a href={item.href}>
+              <span className="navicon">{item.icon}</span>
+              {item.label}
+            </a>
+          </li>
+        ))}
       </ul>
     </nav>
   );

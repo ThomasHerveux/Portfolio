@@ -1,7 +1,6 @@
-section,
 .section {
-  color: var(--default-color);
-  background-color: var(--background-color);
+  background-color: #000;
+  color: #fff;
   padding: 60px 0;
   overflow: clip;
 }
@@ -17,19 +16,21 @@ section,
   margin-bottom: 20px;
   padding-bottom: 20px;
   position: relative;
+  color: #fff;
 }
 
-.section-title h2:after {
+.section-title h2::after {
   content: "";
   position: absolute;
   display: block;
   width: 50px;
   height: 3px;
-  background: var(--accent-color);
+  background: #fa9600;
   left: 0;
   bottom: 0;
 }
 
 .section-title p {
   margin-bottom: 0;
+  color: #ccc;
 }

@@ -7,21 +7,21 @@
   --heading-font: "Raleway", sans-serif;
   --nav-font: "Poppins", sans-serif;
 
-  /* Global Colors */
-  --background-color: #ffffff;
-  --default-color: #272829;
-  --heading-color: #050d18;
-  --accent-color: #149ddd;
-  --surface-color: #ffffff;
-  --contrast-color: #ffffff;
+  /* Global Colors - DARK MODE */
+  --background-color: #000000;         /* Fond global noir */
+  --default-color: #ffffff;            /* Texte blanc */
+  --heading-color: #ffffff;            /* Titres blancs */
+  --accent-color: #ff6600;             /* Hover orange */
+  --surface-color: #0d0d0d;            /* Surfaces sombres */
+  --contrast-color: #ffffff;           /* Texte contrasté */
 
   /* Nav Menu Colors */
-  --nav-color: #a8a9b4;
-  --nav-hover-color: #ffffff;
-  --nav-mobile-background-color: #040b14;
-  --nav-dropdown-background-color: #040b14;
-  --nav-dropdown-color: #a8a9b4;
-  --nav-dropdown-hover-color: #ffffff;
+  --nav-color: #ffffff;
+  --nav-hover-color: var(--accent-color);
+  --nav-mobile-background-color: #000000;
+  --nav-dropdown-background-color: #000000;
+  --nav-dropdown-color: #ffffff;
+  --nav-dropdown-hover-color: var(--accent-color);
 
   scroll-behavior: smooth;
 }
@@ -30,15 +30,17 @@
 # Presets for light/dark sections
 --------------------------------------------------------------*/
 .light-background {
-  --background-color: #f4fafd;
-  --surface-color: #ffffff;
+  --background-color: #000000;
+  --surface-color: #0d0d0d;
+  --default-color: #ffffff;
+  --heading-color: #ffffff;
 }
 
 .dark-background {
-  --background-color: #040b14;
+  --background-color: #000000;
   --default-color: #ffffff;
   --heading-color: #ffffff;
-  --surface-color: #151f2b;
+  --surface-color: #0d0d0d;
   --contrast-color: #ffffff;
 }
 
@@ -63,7 +65,13 @@ a:hover {
   color: color-mix(in srgb, var(--accent-color), transparent 25%);
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1 {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+h2, h3, h4, h5, h6 {
   color: var(--heading-color);
   font-family: var(--heading-font);
 }

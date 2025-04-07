@@ -40,7 +40,7 @@ const Contact = () => {
     <section className="contact section" id="contact">
       <div className="container">
         <div className="section-title">
-          <h2>Contact</h2>
+          <h1>Contact</h1>
           <p>Envie de travailler ensemble ?</p>
         </div>
 

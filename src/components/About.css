@@ -1,27 +1,118 @@
+.about {
+  padding: 80px 0;
+  background-color: #000;
+  color: #fff;
+}
+
+.about .section-title h1 {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #fff;
+  text-transform: uppercase;
+  border-left: 5px solid orange;
+  padding-left: 15px;
+  animation: slide-in 1s ease-out;
+}
+
+.about .section-title p {
+  font-size: 1rem;
+  line-height: 1.8;
+  margin-bottom: 15px;
+  color: #ddd;
+}
+
+.about .section-title p.intro {
+  font-size: 1.1rem;
+  font-style: italic;
+  color: orange;
+}
+
+.about .content {
+  margin-top: 40px;
+}
+
 .about .content h2 {
-    font-weight: 700;
+  font-size: 28px;
+  color: orange;
+  margin-bottom: 20px;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.about .content h2::after {
+  content: "";
+  width: 50px;
+  height: 3px;
+  background-color: orange;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.about .infos {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.about .infos li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.about .infos li i {
+  margin-right: 10px;
+  color: orange;
+  transition: transform 0.3s ease;
+}
+
+.about .infos li:hover i {
+  transform: scale(1.3);
+}
+
+.about .infos li strong {
+  margin-right: 5px;
+  color: #fff;
+}
+
+/* Animations */
+@keyframes slide-in {
+  from {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  animation: fadeInUp 1s ease forwards;
+  opacity: 0;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .about .section-title h1 {
+    font-size: 28px;
+  }
+  .about .content h2 {
     font-size: 24px;
   }
-  
-  .about .content ul {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .about .content ul li {
-    margin-bottom: 20px;
-    display: flex;
-    align-items: center;
-  }
-  
-  .about .content ul strong {
-    margin-right: 10px;
-  }
-  
-  .about .content ul i {
-    font-size: 16px;
-    margin-right: 5px;
-    color: var(--accent-color);
-    line-height: 0;
-  }
-  
+}

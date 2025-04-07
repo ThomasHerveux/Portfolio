@@ -39,7 +39,7 @@ const Portfolio = () => {
     <section className="portfolio section" id="portfolio">
       <div className="container">
         <div className="section-title">
-          <h2>Portfolio</h2>
+          <h1>Portfolio</h1>
           <p>Voici quelques projets que j’ai réalisés récemment</p>
         </div>
 
